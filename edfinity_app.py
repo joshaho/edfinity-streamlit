@@ -26,7 +26,7 @@ def process_edfinity_upload(): #Create File
         st.dataframe(edf)
         if st.button('Remove Assigments with No Successes'):
             edf_summary=edf.sum(axis=0)
-            edf=edf[edf.columns.drop(list(edf_summary[edf_summary==0].index))]
+            edf=edf[edf.columns.drop(list(edf_summary[edf_summary==1].index))]
             st.dataframe(edf)
             #st.dataframe(edf_summary)
 
