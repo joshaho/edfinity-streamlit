@@ -19,7 +19,7 @@ def process_edfinity_upload(): #Create File
         regularization_list=edf.drop(columns=['Last Name', 'First Name', 'Email/Username', 'ID', 'Course Name', 'Review of Prerequisites for Calculus I']).columns
         edf=edf.drop(columns='Review of Prerequisites for Calculus I')
         for column in regularization_list:
-            edf[column]=((edf[column]/(edf[edf['First Name']=='Possible'][column].values))>=.8).astype(int)
+            edf[column]=(round(edf[column]/(edf[edf['First Name']=='Possible'][column].values), 1)>=.8).astype(int)
         edf=edf.drop('ID', axis=1)
         #edf=edf.drop(0, axis=0) #Drop Points Possible Row
         #assignment_list=['Edfinity '+item[0] for item in edf.columns[5:].str.split(' ')]
