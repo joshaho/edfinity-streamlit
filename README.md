@@ -1,4 +1,4 @@
-# Master-Based Grading Generator (Streamlit
+# Master-Based Grading Generator (Streamlit)
 
 For a small side project, I needed a quick tool to ingest a standard format gradebook from [Edfinity](https://edfinity.com/) and convert it into binary grades as an input into an overall mastery-based grading scheme.
 
